@@ -71,33 +71,36 @@ nav {
     }
 }
 
-.sidenav li > a {
-    height: 64px;
-    line-height: 64px;
+.sidenav {
+    width: 200px;
 
-    &:after {
-        display: none;
+    li > a {
+        height: 64px;
+        line-height: 64px;
+
+        &:after {
+            display: none;
+        }
     }
 }
 
 // Main Styles
 // ---------------------------------------------->
 section {
-    //min-height: 100vh;
     min-height: 100vh;
 
     .container {
-        //margin-bottom: 100px;
         padding: 100px 0;
     }
 }
 
-.parallax-window {
-    min-height: auto;
-    background: transparent;
-}
+.parallax-container {
+    height: auto;
 
-.parallax-mirror {
+    .container {
+        padding: 100px 0;
+    }
+
     img {
         -webkit-filter: blur(7px);
         -moz-filter: blur(7px);
@@ -109,6 +112,9 @@ section {
 
 .banner {
     height: 100vh !important;
+    //width: 100%;
+    //position: absolute;
+    //top: 0;
 }
 
 .overlay {
@@ -169,7 +175,7 @@ section {
     }
 }
 
-input {
+input, textarea {
     &.validate + label {
         width: auto !important;
     }
@@ -202,3 +208,4 @@ footer {
         margin: 0;
     }
 }
+
