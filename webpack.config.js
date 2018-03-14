@@ -16,7 +16,7 @@ const webpackConfig = {
 		filename: '[name].js',
         publicPath: ''
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
     module: {
         rules: [
             {
@@ -72,7 +72,7 @@ const webpackConfig = {
                 ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -83,28 +83,28 @@ const webpackConfig = {
                         }
                     }
                 ]
-            },
-            {
-                test: /\.(svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'icons/',
-                            publicPath: 'icons/'
-                        }
-                    }
-                ]
             }
+            // {
+            //     test: /\.(svg)$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'icons/',
+            //                 publicPath: 'icons/'
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
 	plugins: [
         new CleanWebpackPlugin(['build']),
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
-			template: 'src/index.ejs'
-            // favicon: 'src/favicon.ico'
+			template: 'src/index.ejs',
+            favicon: 'src/favicon.ico'
 		}),
         // Get API Key from Server Side
         new webpack.DefinePlugin({

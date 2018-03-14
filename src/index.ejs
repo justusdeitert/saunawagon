@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="<%= require('./images/favicons/touch-icon.png') %>">
-    <link rel="mask-icon" href="<%= require('./icons/safari-pinned-tab.svg') %>" color="#da532c">
+    <link rel="mask-icon" href="<%= require('./images/icons/safari-pinned-tab.svg') %>" color="#da532c">
     <link rel="canonical" href="https://www.saunawagon.de">
 
     <meta name="author" content="Saunawagon" />
@@ -54,16 +54,20 @@
 <!--</div>-->
 <nav role="navigation">
     <div class="nav-wrapper container">
-        <a href="#top" class="left">
-            <i class="icon-wagon-nav"></i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#idea">Idee</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-            <li><a href="#crowdfunding">Crowdfunding</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="row">
+            <div class="col s12">
+                <a href="#top" class="left">
+                    <i class="icon-wagon-nav"></i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#idea">Idee</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#crowdfunding">Crowdfunding</a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
     </div>
 </nav>
 
@@ -74,10 +78,13 @@
     <li><a href="#crowdfunding" class="sidenav-close">Crowdfunding</a></li>
 </ul>
 
-<div class="banner parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/am_see_finnland.jpg') %>">
+<div class="parallax-container banner valign-wrapper">
     <div class="container center-align">
         <i class="icon-wagon-font"></i>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4XQKK2DV8W4FN" target="_blank" class="btn-large waves-effect waves-light amber lighten-1 brown-text text-darken-4">Jetzt spenden</a>
+    </div>
+    <div class="parallax">
+        <img src="<%= require('./images/am_see_finnland.jpg') %>">
     </div>
 </div>
 
@@ -103,13 +110,16 @@
     </div>
 </section>
 
-<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/finnland_special.jpg') %>">
+<div class="parallax-container valign-wrapper">
     <div class="container" >
         <div class="row center">
             <h2 class="header rellax col s12 light white-text">Nimm dir Zeit und schalte ab. Wann, wo und mit wem Du willst.</h2>
         </div>
     </div>
-</section>
+    <div class="parallax">
+        <img src="<%= require('./images/finnland_special.jpg') %>">
+    </div>
+</div>
 
 <section id="team" class="valign-wrapper scrollspy">
     <div class="container">
@@ -179,13 +189,16 @@
     </div>
 </section>
 
-<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/people_bonfire.jpg') %>">
+<div class="parallax-container valign-wrapper">
     <div class="container" >
         <div class="row center">
             <h3 class="header col s12 light white-text">Entspanne deinen Körper und Geist, sorge für dein Wohlbefinden. Atme ein und aus.</h3>
         </div>
     </div>
-</section>
+    <div class="parallax">
+        <img src="<%= require('./images/people_bonfire.jpg') %>">
+    </div>
+</div>
 
 <section id="contact" class="valign-wrapper scrollspy">
     <div class="container">
@@ -243,13 +256,16 @@
     </div>
 </section>
 
-<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/kraeuter.jpg') %>">
+<div class="parallax-container valign-wrapper">
     <div class="container" >
         <div class="row center">
             <h4 class="header col s12 light white-text">Komm zu unseren Outdoor Sauna Events und schalte deine Sinne ein. Achtsamkeit, Wohlbefinden, Entspannung, Yoga und Wildküche stehen auf dem Plan.</h4>
         </div>
     </div>
-</section>
+    <div class="parallax">
+        <img src="<%= require('./images/kraeuter.jpg') %>">
+    </div>
+</div>
 
 <section id="crowdfunding" class="valign-wrapper scrollspy">
     <div class="container">
