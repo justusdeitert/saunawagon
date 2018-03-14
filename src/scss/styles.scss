@@ -1,0 +1,204 @@
+// Basic Styles
+// ---------------------------------------------->
+html {
+    color: #3e2723;
+}
+
+h1 {
+    margin: 30px 0 20px 0;
+    font-size: 100px;
+    font-family: 'Kanit', sans-serif;
+}
+
+h2 {
+    margin: 25px 0 15px 0;
+}
+
+h3 {
+    margin: 25px 0 15px 0;
+}
+
+h3 {
+    margin: 25px 0 15px 0;
+}
+
+h4 {
+    margin: 15px 0 10px 0;
+}
+
+a {
+    display: inline-block;
+    color: #ffca27;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #ffca27;
+    }
+}
+
+// Navigation
+// ---------------------------------------------->
+nav {
+    position: fixed;
+    box-shadow: none;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    a {
+        &:after {
+            display: none;
+        }
+    }
+
+    ul {
+        a {
+            color: #000;
+
+            &:hover, &.active {
+                color: #fff;
+                background-color: #3e2723 !important;
+            }
+        }
+    }
+
+    .sidenav-trigger {
+        float: right;
+        margin: 0;
+        color: #000;
+    }
+}
+
+.sidenav li > a {
+    height: 64px;
+    line-height: 64px;
+
+    &:after {
+        display: none;
+    }
+}
+
+// Main Styles
+// ---------------------------------------------->
+section {
+    //min-height: 100vh;
+    min-height: 100vh;
+
+    .container {
+        //margin-bottom: 100px;
+        padding: 100px 0;
+    }
+}
+
+.parallax-window {
+    min-height: auto;
+    background: transparent;
+}
+
+.parallax-mirror {
+    img {
+        -webkit-filter: blur(7px);
+        -moz-filter: blur(7px);
+        -o-filter: blur(7px);
+        -ms-filter: blur(7px);
+        filter: blur(7px);
+    }
+}
+
+.banner {
+    height: 100vh !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(184, 156, 70, 0.2);
+}
+
+.card-panel {
+    box-shadow: none;
+}
+
+.company-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 15px;
+}
+
+.card {
+    box-shadow: none;
+    margin: 20px 0 20px 0;
+
+    i {
+        position: absolute;
+    }
+
+    span {
+        padding-left: 40px;
+    }
+
+    .card-content {
+        padding: 10px 0;
+        margin-top: -32px;
+        z-index: 2;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card-reveal {
+        padding: 24px 0;
+    }
+
+    .card-title {
+        font-size: 18px;
+        line-height: 24px !important;
+        margin-bottom: 0 !important;
+    }
+
+    img {
+        border-radius: 50% !important;
+        margin: 0 auto;
+        max-width: 230px;
+        top: 1px !important;
+    }
+}
+
+input {
+    &.validate + label {
+        width: auto !important;
+    }
+}
+
+#toast-container {
+    top: 10%;
+    right: 0;
+    left: 0;
+    bottom: inherit;
+    width: 800px;
+    margin: 0 auto;
+    max-width: 100%;
+    z-index: 800;
+
+    .toast {
+        float: right;
+        clear: both;
+        width: initial;
+    }
+}
+
+// Footer Styles
+// ---------------------------------------------->
+footer {
+    height: 100%;
+    padding: 50px 0 !important;
+
+    .page-footer {
+        margin: 0;
+    }
+}

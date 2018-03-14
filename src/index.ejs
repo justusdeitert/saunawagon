@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="<%= require('./images/favicons/touch-icon.png') %>">
+    <link rel="mask-icon" href="<%= require('./icons/safari-pinned-tab.svg') %>" color="#da532c">
+    <link rel="canonical" href="https://www.saunawagon.de">
+
+    <meta name="author" content="Saunawagon" />
+    <meta name="contact" content="info@saunawagon.de" />
+    <meta name="copyright" content="Copyright 2018 Saunawagon. All Rights Reserved." />
+    <meta name="description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+    <meta name="keywords" content="Wellness, Sauna, Berlin, Brandenburg, Erholung, Entspannung, Wildcooking, Events, Wildness, Yoga, Meditation" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+    <meta property="og:url" content="https://www.saunawagon.de" />
+    <meta property="og:image" content="<%= require('./images/favicons/og-image.jpg') %>" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:locale" content="de_DE"/>
+
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta name="twitter:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+    <meta name="twitter:image" content="<%= require('./images/favicons/og-image.jpg') %>" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+        body {
+            transition: opacity 0.3s linear, visible 0.3s linear;
+        }
+
+        body.loading * {
+            display: none;
+        }
+
+        body.loading {
+            overflow: hidden;
+            visibility: hidden;
+            transition: opacity 0.3s linear, visible 0.3s linear;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="loading">
+<!--<div class="progress">-->
+    <!--<div class="determinate" style="width: 70%"></div>-->
+<!--</div>-->
+<nav role="navigation">
+    <div class="nav-wrapper container">
+        <a href="#top" class="left">
+            <i class="icon-wagon-nav"></i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#idea">Idee</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#crowdfunding">Crowdfunding</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<ul id="nav-mobile" class="sidenav">
+    <li><a href="#idea" class="sidenav-close">Idee</a></li>
+    <li><a href="#team" class="sidenav-close">Team</a></li>
+    <li><a href="#contact" class="sidenav-close">Kontakt</a></li>
+    <li><a href="#crowdfunding" class="sidenav-close">Crowdfunding</a></li>
+</ul>
+
+<div class="banner parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/am_see_finnland.jpg') %>">
+    <div class="container center-align">
+        <i class="icon-wagon-font"></i>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4XQKK2DV8W4FN" target="_blank" class="btn-large waves-effect waves-light amber lighten-1 brown-text text-darken-4">Jetzt spenden</a>
+    </div>
+</div>
+
+<section id="idea" class="valign-wrapper scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <p class="flow-text light">Wellness Entspannung - wann, wo und mit wem Du willst. Miete dir den Saunawagon und entscheide selbst, wann der richtige Zeitpunkt ist, um zu entspannen, innezuhalten oder der Hektik der Großstadt zu entkommen. Teile deine Stunden nur mit Leuten, die dir wichtig sind. Zusätzlich veranstalten wir unsere Sauna Outdoor Events. Komm vorbei und genieße die Wirkung ätherischer Öle, Meditation, Yoga, Wildküche und Lagerfeuergeschichten.</p>
+                <br>
+                <h4>Die Idee</h4>
+                <p class="light">
+                    Als Freunde ausgelassener Sauna-Zeremonien kam uns die Idee einen mobilen Shepherd's Wagon (Schäferwagen) zu konstruieren, in dem sich eine geräumige Sauna versteckt. Ausgestattet mit einem 80 km/h Strassenfahrwerk lässt sich der Wagon bequem an jeden Ort, in die Natur oder ans Wasser bringen.
+                    Ob für das gemeinsame BBQ am See, dem Lagerfeuer auf dem Campinglatz oder einer lustigen Runde zu Hause, wird der Saunawagon über ein online Buchungssystem das ganze Jahr über in Berlin und Umgebung gemietet werden können. Darüber hinaus möchten wir Sauna Events veranstalten bei denen es um Besinnung und Erholung in der Natur geht.
+                </p>
+                <br>
+                <h4>Ausstattung</h4>
+                <p class="light">
+                    Der Wagon ist völlig autark. Er benötigt keinen Strom und wird mit einem Finnischen Holzofen befeuert. Er ist über eine extra dafür gebaute Plattform mit Stufen sicher zu begehen, besitzt einen Wassertank mit Aussendusche, eine Ladefläche für die Holzscheite und ein großes Panoramafenster. Die Sauna bietet sitzend Platz für bis zu 10 Personen, für den Bau werden ausschließlich natürliche Materialien verwendet.
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/finnland_special.jpg') %>">
+    <div class="container" >
+        <div class="row center">
+            <h2 class="header rellax col s12 light white-text">Nimm dir Zeit und schalte ab. Wann, wo und mit wem Du willst.</h2>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="valign-wrapper scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3>Das Team</h3>
+                <p class="light">
+                    Hinter Saunawagon steht eine junges und motiviertes Team.
+                    Wir lieben es in der Natur zu saunieren und verfolgen unsere Ziele dabei mit Hingabe und Überzeugung.
+                    Uns vereint eine starke Identifikation mit dem Thema Sauna, Wildcooking und Outdoor Experiences.
+                    Unsere Freude, Leidenschaft und Motivation machen uns besonders: Wir wollen nicht zufrieden stellen, sondern begeistern.
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="<%= require('./images/joni.jpg') %>">
+                    </div>
+                    <div class="card-content">
+                        <i class="card-title activator material-icons left">more_vert</i></span>
+                        <span class="card-title activator grey-text text-darken-4">Jonathan Sibbing</span>
+                    </div>
+                    <div class="card-reveal">
+                        <i class="card-title material-icons left">close</i>
+                        <span class="card-title grey-text text-darken-4">Jonathan Sibbing</span>
+                        <p class="light">Aktions- & Eventkünstler, Tourismuskaufmann, Freigeist, Outdoor Koch & Spezialist, Überlebensstratege</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="<%= require('./images/konni.jpg') %>">
+                    </div>
+                    <div class="card-content">
+                        <i class="card-title activator material-icons left">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4">Konstantin Bischofberger</span>
+                    </div>
+                    <div class="card-reveal">
+                        <i class="card-title material-icons left">close</i>
+                        <span class="card-title grey-text text-darken-4">Konstantin Bischofberger</span>
+                        <p class="light">Sportentusiast, Yoga-Lehrer, Event-Planer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="<%= require('./images/justus.jpg') %>">
+                    </div>
+                    <div class="card-content">
+                        <i class="card-title activator material-icons left">more_vert</i>
+                        <span class="card-title activator grey-text text-darken-4">Justus Deitert</span>
+                    </div>
+                    <div class="card-reveal">
+                        <i class="card-title material-icons left">close</i>
+                        <span class="card-title grey-text text-darken-4">Justus Deitert</span>
+                        <p class="light">Designliebhaber, Saunameister</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/people_bonfire.jpg') %>">
+    <div class="container" >
+        <div class="row center">
+            <h3 class="header col s12 light white-text">Entspanne deinen Körper und Geist, sorge für dein Wohlbefinden. Atme ein und aus.</h3>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="valign-wrapper scrollspy">
+    <div class="container">
+
+        <div class="row">
+            <div class="col l8 m10 s12">
+                <h4>Kontakt</h4>
+                <p class="light">Sie haben eine Frage zu unserem Projekt? Nehmen Sie Kontakt mit uns auf! Füllen Sie das Formular aus und senden Sie uns Ihre Nachricht. Wir werden Ihnen so schnell wie möglich antworten.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col m6 s12">
+                        <!--<i class="material-icons prefix">account_circle</i>-->
+                        <input id="first_name" name="first_name" type="text" class="validate">
+                        <label for="first_name">Vorname</label>
+                        <!--<span class="helper-text" data-error="Bitte geben Sie einen Vornamen ein."></span>-->
+                    </div>
+                    <div class="input-field col m6 s12">
+                        <!--<i class="material-icons prefix">phone</i>-->
+                        <input id="last_name" name="last_name" type="tel" class="validate">
+                        <label for="last_name">Nachname</label>
+                        <!--<span class="helper-text" data-error="Bitte geben Sie einen Nachnamen ein."></span>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <!--<i class="material-icons prefix">subject</i>-->
+                        <input id="subject" name="subject" type="text"  class="validate">
+                        <label for="subject">Betreff</label>
+                        <!--<span class="helper-text" data-error="Bitte geben Sie Ihren Betreff ein."></span>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <!--<i class="material-icons prefix">email</i>-->
+                        <input id="email" name="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                        <!--<span class="helper-text" data-error="Bitte geben Sie Ihre korrekte Email Adresse ein."></span>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <!--<i class="material-icons prefix">mode_edit</i>-->
+                        <textarea id="message" name="message" class="materialize-textarea validate"></textarea>
+                        <label for="message">Deine Nachricht</label>
+                        <!--<span class="helper-text" data-error="Bitte geben Sie Ihre Nachricht ein."></span>-->
+                    </div>
+                </div>
+                <button class="btn-large waves-effect waves-light amber lighten-1 brown-text text-darken-4">Senden</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="parallax-window valign-wrapper" data-parallax="scroll" data-image-src="<%= require('./images/kraeuter.jpg') %>">
+    <div class="container" >
+        <div class="row center">
+            <h4 class="header col s12 light white-text">Komm zu unseren Outdoor Sauna Events und schalte deine Sinne ein. Achtsamkeit, Wohlbefinden, Entspannung, Yoga und Wildküche stehen auf dem Plan.</h4>
+        </div>
+    </div>
+</section>
+
+<section id="crowdfunding" class="valign-wrapper scrollspy">
+    <div class="container">
+        <div class="row card-panel">
+            <div class="col s12 m3 center">
+                <!--<div class="image startnext circle"></div>-->
+                <img src="<%= require('./images/startnext_logo.jpg') %>" class="company-img circle">
+            </div>
+            <div class="col s12 m9">
+                <h4>Startnext</h4>
+                <p class="light">Damit der Saunawagon im Winter 2018 für Euch verfügbar stehen kann, brauchen wir jetzt Eure Hilfe. Unterstüzt unsere Kampagne bei Startnext und sichert Euch exklusive Dankeschöns!</p>
+                <a href="https://www.startnext.com/saunawagon" target="_blank" class="btn waves-effect waves-light amber lighten-1 brown-text text-darken-4">Zur Kampagne</a>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row card-panel">
+            <div class="col s12 m8">
+                <h4 class="right-align">Paypal</h4>
+                <p class="light right-align">Wir haben ein Paypal Spendenkonto! Helft uns direkt unser Projekt zu realisieren. </p>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4XQKK2DV8W4FN" target="_blank" class="btn right waves-effect waves-light amber lighten-1 brown-text text-darken-4">Jetzt spenden</a>
+            </div>
+            <div class="col s12 m3 center">
+                <img src="<%= require('./images/paypal_logo.png') %>" class="company-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="page-footer brown darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col m6 s12">
+                <h5 class="white-text">Saunawagon © <%= new Date().getFullYear() %></h5>
+                <p class="light">Sauna, Natur, Events, Wildcooking. Unterstütze unsere Startnext Kampagne und helfe uns den Saunawagen auf die Beine zu stellen.</p>
+            </div>
+            <div class="col offset-m3 m3 s12">
+                <h6 class="white-text">Links</h6>
+                <ul>
+                    <li><a class="light underline" target="_blank" href="https://www.startnext.com/saunawagon">Startnext</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
