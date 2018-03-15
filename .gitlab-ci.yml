@@ -3,7 +3,7 @@ variables:
 
 production:
   only:
-    - production
+    - master
   script:
     - cd SSH_DOCUMENT_ROOT
     - rm -rf .
