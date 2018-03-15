@@ -20,10 +20,9 @@ jQuery(function ($) {
     $('.sidenav').sidenav({ edge: 'right' });
     $('.scrollspy').scrollSpy({ scrollOffset: 0});
     $('.tabs').tabs({ swipeable: false });
+});
 
-
-    $(window).on('load', function() {
-        $('body').removeClass('loading');
-        $('.parallax').parallax();
-    });
+$(window).on('load', function() {
+    $('body').removeClass('loading');
+    $('.parallax').parallax();
 });

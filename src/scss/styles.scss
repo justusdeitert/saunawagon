@@ -27,16 +27,7 @@ h4 {
 }
 
 a {
-    display: inline-block;
     color: #ffca27;
-
-    &:after {
-        content: '';
-        display: block;
-        height: 1px;
-        width: 100%;
-        background-color: #ffca27;
-    }
 }
 
 // Navigation
