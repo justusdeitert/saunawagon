@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="<%= require('./images/favicons/touch-icon.png') %>">
     <link rel="mask-icon" href="<%= require('./images/icons/safari-pinned-tab.svg') %>" color="#da532c">
-    <link rel="canonical" href="https://www.saunawagon.de">
 
     <meta name="author" content="Saunawagon" />
     <meta name="contact" content="info@saunawagon.de" />
@@ -21,14 +20,14 @@
     <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
     <meta property="og:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
     <meta property="og:url" content="https://www.saunawagon.de" />
-    <meta property="og:image" content="<%= require('./images/favicons/og-image.jpg') %>" />
+    <meta property="og:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="900" />
+    <meta property="og:image:height" content="900" /s>
     <meta property="og:locale" content="de_DE"/>
 
     <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
     <meta name="twitter:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
-    <meta name="twitter:image" content="<%= require('./images/favicons/og-image.jpg') %>" />
+    <meta name="twitter:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <style>
@@ -280,15 +279,19 @@
                 <a href="https://www.startnext.com/saunawagon" target="_blank" class="btn waves-effect waves-light amber lighten-1 brown-text text-darken-4">Zur Kampagne</a>
             </div>
         </div>
-        <div class="divider"></div>
         <div class="row card-panel">
-            <div class="col s12 m8">
-                <h4 class="right-align">Paypal</h4>
-                <p class="light right-align">Wir haben ein Paypal Spendenkonto! Helft uns direkt unser Projekt zu realisieren. </p>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4XQKK2DV8W4FN" target="_blank" class="btn right waves-effect waves-light amber lighten-1 brown-text text-darken-4">Jetzt spenden</a>
+            <div class="col s12">
+                <div class="divider"></div>
             </div>
+        </div>
+        <div class="row card-panel">
             <div class="col s12 m3 center">
                 <img src="<%= require('./images/paypal_logo.png') %>" class="company-img">
+            </div>
+            <div class="col s12 m8">
+                <h4>Paypal</h4>
+                <p class="light">Wir haben ein Paypal Spendenkonto! Helft uns direkt unser Projekt zu realisieren. </p>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4XQKK2DV8W4FN" target="_blank" class="btn waves-effect waves-light amber lighten-1 brown-text text-darken-4">Jetzt spenden</a>
             </div>
         </div>
     </div>
@@ -302,7 +305,7 @@
                 <p class="light">Sauna, Natur, Events, Wildcooking. Unterstütze unsere Startnext Kampagne und helfe uns den Saunawagen auf die Beine zu stellen.</p>
             </div>
             <div class="col offset-m3 m3 s12">
-                <h6 class="white-text">Links</h6>
+                <h5 class="white-text">Links</h5>
                 <ul>
                     <li><a class="light underline" target="_blank" href="https://www.startnext.com/saunawagon">Startnext</a></li>
                 </ul>

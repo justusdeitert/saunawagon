@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production --open"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
