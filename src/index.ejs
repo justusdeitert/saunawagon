@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://www.saunawagon.de" />
     <meta property="og:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="900" /s>
+    <meta property="og:image:height" content="900" />
     <meta property="og:locale" content="de_DE"/>
 
     <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
@@ -30,15 +30,10 @@
     <meta name="twitter:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76171732-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-76171732-2');
-    </script>
+    <!-- This is a fix for the HTMLWebpackPlugin to have different scripts injected in Body and Head -->
+    <% for (var chunk in htmlWebpackPlugin.options.head) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.head[chunk]].entry %>"></script>
+    <% } %>
 
     <style>
         body {
@@ -318,10 +313,56 @@
                 <h5 class="white-text">Links</h5>
                 <ul>
                     <li><a class="light underline" target="_blank" href="https://www.startnext.com/saunawagon">Startnext</a></li>
+                    <li><a class="light underline modal-trigger" href="#datenschutz">Datenschutz</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+
+<!-- Modal Structure -->
+<div id="datenschutz" class="modal">
+    <i class="modal-close material-icons">close</i>
+    <div class="modal-content">
+        <h5>Google Analytics</h5>
+        <p>Soweit Sie Ihre Einwilligung erklärt haben, wird auf dieser Website Google Analytics eingesetzt, ein Webanalysedienst der Google Inc. („Google“). Hierdurch ist es möglich, Daten, Sitzungen und Interaktionen über mehrere Geräte hinweg einer pseudonymen User-ID zuzuordnen und so die Aktivitäten eines Nutzers geräteübergreifend zu analysieren.</p>
+        <p>Google Analytics verwendet sog. Cookies, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Wir weisen Sie darauf hin, dass auf dieser Webseite Google Analytics um eine IP-Anonymisierung erweitert wurde, um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter https://www.google.com/analytics/terms/de.html bzw. unter https://policies.google.com/?hl=de.</p>
+        <br>
+        <h6>Zwecke der Verarbeitung</h6>
+        <hr>
+        <p>Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</p>
+        <br>
+        <h6>Rechtsgrundlage</h6>
+        <hr>
+        <p>Die Rechtsgrundlage für den Einsatz von Google Analytics ist Ihre Einwilligung gemäß Art. 6 Abs. 1 S.1 lit. a DSGVO.</p>
+        <br>
+        <h6>Empfänger / Kategorien von Empfängern</h6>
+        <hr>
+        <p>Der Empfänger der erhobenen Daten ist Google.</p>
+        <br>
+        <h6>Übermittlung in Drittstaaten</h6>
+        <hr>
+        <p>Die personenbezogenen Daten werden unter dem EU-US Privacy Shield auf Grundlage des Angemessenheitsbeschlusses der Europäischen Kommission in die USA übermittelt.</p>
+        <br>
+        <h6>Dauer der Datenspeicherung</h6>
+        <hr>
+        <p>Die von uns gesendeten und mit Cookies, Nutzerkennungen (z. B. User-ID) oder Werbe-IDs verknüpften Daten werden nach 14 Monaten automatisch gelöscht. Die Löschung von Daten, deren Aufbewahrungsdauer erreicht ist, erfolgt automatisch einmal im Monat.</p>
+        <br>
+        <h6>Betroffenenrechte</h6>
+        <hr>
+        <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.</p>
+        <p>Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das <a href="http://tools.google.com/dlpage/gaoptout?hl=de" target="_blank">Browser-Plugin herunterladen</a> und installieren. Opt-Out-Cookies verhindern die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website. Um die Erfassung durch Universal Analytics über verschiedene Geräte hinweg zu verhindern, müssen Sie das Opt-Out auf allen genutzten Systemen durchführen.</p>
+        <p>Wenn Sie hier klicken, können sie das Opt-Out-Cookie setzten um die verwendung von Google Analytics zu verhindern: </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="waves-effect waves-green btn-flat set-opt-out-cookie">Google Analytics ist noch nicht aktiv</a>
+    </div>
+</div>
+
+<!-- This is a fix for the HTMLWebpackPlugin to have different scripts injected in Body and Head -->
+<% for (var chunk in htmlWebpackPlugin.options.body) { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.body[chunk]].entry %>"></script>
+<% } %>
+
 </body>
 </html>
