@@ -9,7 +9,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const webpackConfig = {
     entry: {
         // jquery: 'jquery',
-        app: './src/app.js'
+        app: './src/app.js',
+        analytics: './src/js/analytics.js'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -104,7 +105,11 @@ const webpackConfig = {
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
 			template: 'src/index.ejs',
-            favicon: 'src/favicon.ico'
+            favicon: 'src/favicon.ico',
+            inject: false,
+            chunks: ['analytics', 'app'],
+            head: ['analytics'],
+            body: ['app']
 		}),
         // Get API Key from Server Side
         new webpack.DefinePlugin({
