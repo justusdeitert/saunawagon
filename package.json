@@ -3,8 +3,8 @@
   "description": "Website of an Sauna Wagon Campaign",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --watch",
     "deploy": "rsync -chavzP --delete --progress --stats ./build/ root@justusdeitert:/var/www/vhosts/saunawagon.de/website/"
   },
   "devDependencies": {

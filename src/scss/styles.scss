@@ -200,3 +200,28 @@ footer {
     }
 }
 
+.toast {
+
+    margin: 0 30px 10px 30px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .toast-action {
+        word-break: normal;
+        margin: 0;
+    }
+
+    span {
+        word-break: break-word;
+    }
+}
+
+.modal {
+    .modal-close.material-icons {
+        position: absolute;
+        right: 0;
+        padding: 10px;
+    }
+}
