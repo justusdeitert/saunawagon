@@ -30,6 +30,16 @@
     <meta name="twitter:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76171732-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-76171732-2');
+    </script>
+
     <style>
         body {
             transition: opacity 0.3s linear, visible 0.3s linear;
@@ -220,7 +230,7 @@
                     </div>
                     <div class="input-field col m6 s12">
                         <!--<i class="material-icons prefix">phone</i>-->
-                        <input id="last_name" name="last_name" type="tel" class="validate">
+                        <input id="last_name" name="last_name" type="text" class="validate">
                         <label for="last_name">Nachname</label>
                         <!--<span class="helper-text" data-error="Bitte geben Sie einen Nachnamen ein."></span>-->
                     </div>
