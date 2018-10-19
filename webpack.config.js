@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin"); //installed via npm
-const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
@@ -15,16 +14,11 @@ const webpackConfig = {
     output: {
         path: path.resolve(__dirname, 'build'),
 		filename: '[name].js',
-        publicPath: ''
+        publicPath: '',
     },
     // devtool: 'source-map',
     module: {
         rules: [
-            {
-                parser: {
-                    amd: false
-                }
-            },
             {
                 test: /\.(ejs)/,
                 use: [
@@ -85,10 +79,22 @@ const webpackConfig = {
                     }
                 ]
             }
+            // {
+            //     test: /\.(svg)$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'icons/',
+            //                 publicPath: 'icons/'
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
 	plugins: [
-        new CleanWebpackPlugin(['build']),
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
 			template: 'src/index.ejs',
