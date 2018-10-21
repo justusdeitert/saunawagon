@@ -1,0 +1,24 @@
+// Form Styles
+// ==============================================
+
+input, textarea {
+    &.validate + label {
+        width: auto !important;
+    }
+    
+    border-bottom: 2px solid rgba($sauna-wood-light, 0.5) !important;
+    transition: all 0.3s ease !important;
+    
+    &:focus {
+        border-bottom: 2px solid $sauna-ember !important;
+        box-shadow: 0 1px 0 0 $sauna-ember !important;
+    }
+    
+    &:focus + label {
+        color: $sauna-ember !important;
+    }
+}
+
+label {
+    color: $sauna-stone !important;
+}
