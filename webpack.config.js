@@ -21,7 +21,7 @@ const webpackConfig = {
         hot: true,
         open: true,
         port: 8080,
-        watchContentBase: true,
+        watchContentBase: true, //watchFiles: ['src/**/*.ejs', 'src/**/*.html'],
     },
     // devtool: 'source-map',
     module: {
