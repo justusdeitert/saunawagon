@@ -16,6 +16,13 @@ const webpackConfig = {
 		filename: '[name].js',
         publicPath: '',
     },
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        hot: true,
+        open: true,
+        port: 8080,
+        watchContentBase: true,
+    },
     // devtool: 'source-map',
     module: {
         rules: [
@@ -24,12 +31,7 @@ const webpackConfig = {
                 use: [
                     {
                         loader: 'ejs-loader',
-                        options: {
-                            htmlmin: false,
-                            htmlminOptions: {
-                                removeComments: true
-                            }
-                        }
+                        options: {}
                     }
                 ]
             },

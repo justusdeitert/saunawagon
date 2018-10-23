@@ -2,8 +2,9 @@
   "name": "saunawagon",
   "description": "Website of an Sauna Wagon Campaign",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
+    "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development"
   },
@@ -18,6 +19,11 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "file-loader": "^2.0.0",
+    "url-loader": "^1.1.2",
     "ejs-loader": "^0.3.1",
     "sass": "^1.14.0"
   },
