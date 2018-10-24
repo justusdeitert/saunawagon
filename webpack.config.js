@@ -102,7 +102,17 @@ const webpackConfig = {
             // }
         ]
     },
+    resolve: {
+        alias: {
+            // Provide empty module for jQuery since Materialize's M.* API doesn't need it
+            jquery: path.resolve(__dirname, 'src/empty.js')
+        }
+    },
 	plugins: [
+        // Make lodash available globally (required by ejs-loader compiled templates)
+        new webpack.ProvidePlugin({
+            _: 'lodash'
+        }),
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
 			template: 'src/index.ejs',
@@ -115,13 +125,6 @@ const webpackConfig = {
         // Get API Key from Server Side
         new webpack.DefinePlugin({
             API_KEY: '',
-        }),
-        new webpack.ProvidePlugin({
-            _: 'lodash',
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery',
-            $: "jquery",
-            jQuery: "jquery"
         })
 	]
 };
