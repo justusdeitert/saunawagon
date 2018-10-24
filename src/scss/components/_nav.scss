@@ -67,8 +67,31 @@ nav {
         }
     }
     
-    .icon-wagon-nav {
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        height: 64px;
+        
+        .nav-icon {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .nav-brand-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            color: $sauna-wood-dark;
+        }
+        
+        &:hover {
+            .nav-brand-text {
+                color: $sauna-ember;
+            }
+        }
     }
 }
 
