@@ -27,6 +27,7 @@
     "sass": "^1.14.0"
   },
   "dependencies": {
-    "materialize-css": "^1.0.0"
+    "materialize-css": "^1.0.0",
+    "swiper": "^4.4.1"
   }
 }

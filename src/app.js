@@ -8,6 +8,10 @@ import './scss/styles.scss';
 // node_modules
 import 'materialize-css';
 
+// Swiper carousel
+import Swiper from 'swiper/dist/js/swiper.min';
+import 'swiper/dist/css/swiper.min.css';
+
 // js imports
 import './js/sendMail';
 
@@ -35,5 +39,36 @@ window.addEventListener('load', function() {
     
     const parallaxElems = document.querySelectorAll('.parallax');
     M.Parallax.init(parallaxElems);
-});
 
+    // Initialize Swiper gallery after styles are applied
+    var gallerySwiper = new Swiper('.gallery-swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            },
+            992: {
+                slidesPerView: 2.2,
+                spaceBetween: 15,
+            }
+        }
+    });
+});
