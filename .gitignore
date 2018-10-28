@@ -48,6 +48,10 @@ package-lock.json
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
 
+# Docker
+Dockerfile
+.dockerignore
+
 # Dependency directories
 node_modules
 bower_components
