@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin"); //installed via npm
-const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
@@ -15,21 +14,20 @@ const webpackConfig = {
     output: {
         path: path.resolve(__dirname, 'build'),
 		filename: '[name].js',
-        publicPath: ''
+        publicPath: '',
+        clean: true
     },
     // devtool: 'source-map',
     module: {
         rules: [
             {
-                parser: {
-                    amd: false
-                }
-            },
-            {
                 test: /\.(ejs)/,
                 use: [
                     {
-                        loader: 'ejs-loader'
+                        loader: 'ejs-loader',
+                        options: {
+                            esModule: false
+                        }
                     }
                 ]
             },
@@ -55,35 +53,27 @@ const webpackConfig = {
                     // compiles Sass to CSS
                     loader: 'sass-loader',
                     options: {
-                        sourceMap: true
+                        sourceMap: true,
+                        sassOptions: {
+                            quietDeps: true,
+                            silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'slash-div', 'legacy-js-api']
+                        }
                     }
                 }]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'fonts/',
-                            publicPath: 'fonts/'
-                        }
-                    }
-                ]
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'images/',
-                            publicPath: 'images/'
-                        }
-                    }
-                ]
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
             }
             // {
             //     test: /\.(svg)$/,
@@ -101,7 +91,6 @@ const webpackConfig = {
         ]
     },
 	plugins: [
-        new CleanWebpackPlugin(['build']),
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
 			template: 'src/index.ejs',

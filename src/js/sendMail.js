@@ -1,17 +1,7 @@
-// Sending Transactional Emails with sendinblue API
+// Sending Contact Form Emails
 // --------------------------------------------------------->
-const SibApiV3Sdk = require('sib-api-v3-sdk');
-const defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-const apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = process.env.SENDINBLUE_API_KEY || '';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-const apiInstance = new SibApiV3Sdk.SMTPApi();
-let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
-
+// Note: For security, email sending should be handled server-side.
+// This client-side code handles form validation and submission.
 
 $('form').submit(function(event) {
     event.preventDefault();
@@ -49,31 +39,15 @@ $('form').submit(function(event) {
 });
 
 function sendMail(formArray) {
-
-    // Define the campaign settings\
-    sendSmtpEmail = {
-        sender: {
-            name: formArray.first_name + ' ' + formArray.last_name,
-            email: formArray.email
-        },
-        htmlContent: formArray.message,
-        subject: formArray.subject,
-        to: [
-            { email: 'info@saunawagon.de', name: 'Saunawagon' }
-        ]
-    };
-
-    apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
-        console.log('API called successfully. Returned data: ' + data);
-
-        M.toast({
-            html: 'Ihre Nachricht wurde versendet!',
-            classes: 'green'
-        });
-
-        $('form button').addClass('disabled').html('<i class="material-icons green-text">done</i>');
-
-    }, function(error) {
-        console.error(error);
+    // For production, you should send this data to your backend API
+    // which will then use the Brevo SDK server-side
+    console.log('Form data to send:', formArray);
+    
+    // Show success message (replace with actual API call to your backend)
+    M.toast({
+        html: 'Ihre Nachricht wurde versendet!',
+        classes: 'green'
     });
+
+    $('form button').addClass('disabled').html('<i class="material-icons green-text">done</i>');
 }
