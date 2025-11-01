@@ -1,0 +1,32 @@
+// Button Styles
+// ==============================================
+
+.btn, .btn-large {
+    background: linear-gradient(135deg, $sauna-ember, darken($sauna-ember, 8%)) !important;
+    color: white !important;
+    border-radius: 50px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 0 32px;
+    box-shadow: 0 4px 15px rgba($sauna-ember, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: none;
+    
+    &:hover {
+        background: linear-gradient(135deg, darken($sauna-ember, 5%), darken($sauna-ember, 15%)) !important;
+        box-shadow: 0 6px 20px rgba($sauna-ember, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.btn-large {
+    height: 54px;
+    line-height: 54px;
+    font-size: 1rem;
+    padding: 0 40px;
+}
