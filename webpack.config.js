@@ -21,12 +21,15 @@ const webpackConfig = {
     module: {
         rules: [
             {
-                test: /\.(ejs)/,
+                test: /\.ejs$/,
                 use: [
                     {
-                        loader: 'ejs-loader',
+                        loader: 'ejs-compiled-loader',
                         options: {
-                            esModule: false
+                            htmlmin: false,
+                            htmlminOptions: {
+                                removeComments: true
+                            }
                         }
                     }
                 ]
