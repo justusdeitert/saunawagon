@@ -17,6 +17,15 @@ const webpackConfig = {
         publicPath: '',
         clean: true
     },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'build'),
+        },
+        hot: true,
+        open: true,
+        port: 8080,
+        watchFiles: ['src/**/*.ejs', 'src/**/*.html'],
+    },
     // devtool: 'source-map',
     module: {
         rules: [
