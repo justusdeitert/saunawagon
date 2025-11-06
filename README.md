@@ -4,7 +4,7 @@
 
 Mobile Sauna für Events und Vermietung – erlebe außergewöhnliche Outdoor-Erlebnisse oder entspanne einfach in der Natur.
 
-🔗 **[Live Preview](https://saunawagon.netlify.app/)**
+🚀 **Preview:** [saunawagon.netlify.app](https://saunawagon.netlify.app/)
 
 ---
 
