@@ -7,24 +7,33 @@ import './scss/styles.scss';
 
 // node_modules
 import 'materialize-css';
-// import 'jquery-parallax.js';
 
 // js imports
 import './js/sendMail';
 
-// jQuery on Document Ready Function
-jQuery(function ($) {
+// DOM Ready Function
+document.addEventListener('DOMContentLoaded', function() {
     console.log('%c DOM Ready!!', 'font-weight: bold;');
     console.log('%c Hello Visitor! :)', 'color: green; font-weight: bold; font-size: 2em');
 
-    $('.modal').modal();
-    $('.sidenav').sidenav({ edge: 'right' });
-    $('.scrollspy').scrollSpy({ scrollOffset: 0});
-    $('.tabs').tabs({ swipeable: false });
+    // Initialize Materialize components
+    const modals = document.querySelectorAll('.modal');
+    M.Modal.init(modals);
+
+    const sidenavs = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenavs, { edge: 'right' });
+
+    const scrollspyElems = document.querySelectorAll('.scrollspy');
+    M.ScrollSpy.init(scrollspyElems, { scrollOffset: 0 });
+
+    const tabs = document.querySelectorAll('.tabs');
+    M.Tabs.init(tabs, { swipeable: false });
 });
 
-$(window).on('load', function() {
-    $('body').removeClass('loading');
-    $('.parallax').parallax();
+window.addEventListener('load', function() {
+    document.body.classList.remove('loading');
+    
+    const parallaxElems = document.querySelectorAll('.parallax');
+    M.Parallax.init(parallaxElems);
 });
 

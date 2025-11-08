@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
             classes: 'cookie-notice'
         });
 
-        $('.confirm-cookies').click(function() {
-            let toastInstance = M.Toast.getInstance($('.cookie-notice'));
+        document.querySelector('.confirm-cookies').addEventListener('click', function() {
+            const cookieNotice = document.querySelector('.cookie-notice');
+            const toastInstance = M.Toast.getInstance(cookieNotice);
             toastInstance.dismiss();
             initAnalytics();
             setOptOut();

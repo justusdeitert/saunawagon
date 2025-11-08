@@ -102,6 +102,12 @@ const webpackConfig = {
             // }
         ]
     },
+    resolve: {
+        alias: {
+            // Provide empty module for jQuery since Materialize's M.* API doesn't need it
+            jquery: false
+        }
+    },
 	plugins: [
 		new HtmlWebpackPlugin({
             title: 'Saunawagon - Events & Vermietung',
@@ -115,12 +121,6 @@ const webpackConfig = {
         // Get API Key from Server Side
         new webpack.DefinePlugin({
             API_KEY: '',
-        }),
-        new webpack.ProvidePlugin({
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery',
-            $: "jquery",
-            jQuery: "jquery"
         })
 	]
 };
