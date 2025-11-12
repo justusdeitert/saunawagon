@@ -1,3 +1,49 @@
-## Materialize Website made with Webpack
+# 🧖 Saunawagon
 
-Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur.
+> Sauna, Wellness & Entspannung inmitten der Natur Berlin-Brandenburgs
+
+Mobile Sauna für Events und Vermietung – erlebe außergewöhnliche Outdoor-Erlebnisse oder entspanne einfach in der Natur.
+
+🔗 **[Live Preview](https://saunawagon.netlify.app/)**
+
+---
+
+## Tech Stack
+
+- **Webpack** – Module bundler
+- **Materialize CSS** – UI framework
+- **Sass** – CSS preprocessor
+- **EJS** – Templating
+- **Splide.js** – Image carousel
+
+## Getting Started
+
+```bash
+# Install dependencies
+yarn install
+
+# Start development server
+yarn dev
+
+# Build for production
+yarn build
+
+# Build in watch mode
+yarn watch
+```
+
+## Project Structure
+
+```
+src/
+├── app.js          # Main entry point
+├── index.ejs       # HTML template
+├── partials/       # EJS components
+├── scss/           # Styles
+├── js/             # JavaScript modules
+└── images/         # Assets
+```
+
+## Deployment
+
+The site is deployed via Netlify. Push to main branch triggers automatic deployment.
