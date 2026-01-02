@@ -8,6 +8,10 @@ import './scss/styles.scss';
 // node_modules
 import 'materialize-css';
 
+// Splide carousel
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
+
 // js imports
 import './js/sendMail';
 
@@ -28,6 +32,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const tabs = document.querySelectorAll('.tabs');
     M.Tabs.init(tabs, { swipeable: false });
+
+    // Initialize Splide gallery
+    const gallerySlider = document.querySelector('.gallery-splide');
+    if (gallerySlider) {
+        new Splide('.gallery-splide', {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+            gap: '20px',
+            padding: { left: '5%', right: '5%' },
+            focus: 'center',
+            autoplay: true,
+            interval: 5000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            breakpoints: {
+                1200: {
+                    perPage: 2,
+                    padding: { left: '3%', right: '3%' },
+                },
+                768: {
+                    perPage: 1,
+                    padding: { left: '10%', right: '10%' },
+                    gap: '15px',
+                },
+                480: {
+                    padding: { left: '5%', right: '5%' },
+                }
+            }
+        }).mount();
+    }
 });
 
 window.addEventListener('load', function() {
