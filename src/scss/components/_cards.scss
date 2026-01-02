@@ -1,0 +1,109 @@
+// Card Styles
+// ==============================================
+
+.card-panel {
+    box-shadow: 0 8px 32px rgba($sauna-wood-dark, 0.08);
+    border-radius: 16px;
+    background: white;
+    border: 1px solid rgba($sauna-wood-light, 0.2);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        box-shadow: 0 12px 40px rgba($sauna-wood-dark, 0.12);
+        transform: translateY(-4px);
+    }
+    
+    .divider {
+        background: linear-gradient(90deg, transparent, $sauna-wood-light, transparent);
+        height: 1px;
+        margin: 20px 0;
+    }
+}
+
+.company-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 15px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.card {
+    box-shadow: none;
+    border-radius: 20px;
+    margin: 20px 0 20px 0;
+    overflow: hidden;
+    background: white;
+    border: 1px solid rgba($sauna-wood-light, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        box-shadow: none;
+        transform: translateY(-8px);
+        
+        img {
+            transform: scale(1.05);
+        }
+    }
+
+    i {
+        position: absolute;
+        color: $sauna-ember;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    span {
+        padding-left: 40px;
+    }
+
+    .card-image {
+        background: linear-gradient(135deg, rgba($sauna-ember, 0.1), rgba($sauna-forest, 0.1));
+        padding: 20px 0;
+    }
+
+    .card-content {
+        padding: 20px;
+        margin-top: -32px;
+        z-index: 2;
+        position: relative;
+        background: linear-gradient(180deg, rgba(white, 0.95), white);
+        backdrop-filter: blur(10px);
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-reveal {
+        padding: 24px;
+        background: white;
+        border-radius: 0 0 20px 20px;
+        
+        p.light {
+            line-height: 1.8;
+        }
+    }
+
+    .card-title {
+        font-size: 18px;
+        line-height: 24px !important;
+        margin-bottom: 0 !important;
+        color: $sauna-wood-dark;
+        font-weight: 600;
+    }
+
+    img {
+        border-radius: 50% !important;
+        margin: 0 auto;
+        max-width: 230px;
+        top: 1px !important;
+        border: 4px solid white;
+        box-shadow: 0 8px 24px rgba($sauna-wood-dark, 0.15);
+        transition: transform 0.4s ease;
+    }
+}

@@ -1,0 +1,97 @@
+// Toast & Modal Styles
+// ==============================================
+
+#toast-container {
+    top: auto;
+    right: 20px;
+    left: auto;
+    bottom: 20px;
+    width: auto;
+    max-width: 600px;
+    margin: 0;
+    z-index: 800;
+
+    .toast {
+        float: none;
+        clear: both;
+        width: initial;
+        background: $sauna-wood-dark;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+}
+
+.toast {
+    margin: 0 30px 10px 30px;
+    border-radius: 12px;
+    background: $sauna-wood-dark;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .toast-action {
+        word-break: normal;
+        margin: 0;
+        color: $sauna-ember;
+    }
+
+    span {
+        word-break: break-word;
+    }
+}
+
+.modal {
+    border-radius: 20px;
+    background: $sauna-steam;
+    
+    .modal-close.material-icons {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 10px;
+        color: $sauna-wood-dark;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        
+        &:hover {
+            background: rgba($sauna-ember, 0.1);
+            color: $sauna-ember;
+        }
+    }
+    
+    .modal-content {
+        padding: 40px;
+        
+        h5, h6 {
+            color: $sauna-wood-dark;
+            
+            &::after {
+                display: none;
+            }
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, $sauna-wood-light, transparent);
+            margin: 10px 0 15px 0;
+        }
+        
+        p {
+            color: $sauna-stone;
+            line-height: 1.7;
+        }
+    }
+    
+    .modal-footer {
+        background: rgba($sauna-wood-light, 0.1);
+        border-radius: 0 0 20px 20px;
+        
+        .btn-flat {
+            color: $sauna-ember;
+            font-weight: 600;
+        }
+    }
+}

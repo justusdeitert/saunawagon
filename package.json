@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development",
-    "deploy": "rsync -chavzP --delete --progress --stats ./build/ root@justusdeitert:/var/www/vhosts/saunawagon.de/website/"
+    "watch": "webpack --watch --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
