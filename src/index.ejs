@@ -30,10 +30,8 @@
     <meta name="twitter:image" content="<%= 'https://www.saunawagon.de/' + require('./images/favicons/og-image.jpg') %>" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- This is a fix for the HTMLWebpackPlugin to have different scripts injected in Body and Head -->
-    <% for (var chunk in htmlWebpackPlugin.options.head) { %>
-    <script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.head[chunk]].entry %>"></script>
-    <% } %>
+    <!-- Analytics script loaded in head -->
+    <script src="analytics.js"></script>
 
     <style>
         body {
@@ -359,10 +357,8 @@
     </div>
 </div>
 
-<!-- This is a fix for the HTMLWebpackPlugin to have different scripts injected in Body and Head -->
-<% for (var chunk in htmlWebpackPlugin.options.body) { %>
-<script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.body[chunk]].entry %>"></script>
-<% } %>
+<!-- Main app script loaded at end of body -->
+<script src="app.js"></script>
 
 </body>
 </html>
