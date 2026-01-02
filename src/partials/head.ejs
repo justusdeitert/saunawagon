@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<title><%= htmlWebpackPlugin.options.title %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5D3A1A">
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="<%= require('../images/favicons/touch-icon.png') %>">
+<link rel="mask-icon" href="<%= require('../images/icons/safari-pinned-tab.svg') %>" color="#da532c">
+
+<meta name="author" content="Saunawagon" />
+<meta name="contact" content="info@saunawagon.de" />
+<meta name="copyright" content="Copyright 2018 Saunawagon. All Rights Reserved." />
+<meta name="description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+<meta name="keywords" content="Wellness, Sauna, Berlin, Brandenburg, Erholung, Entspannung, Wildcooking, Events, Wildness, Yoga, Meditation" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+<meta property="og:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+<meta property="og:url" content="https://www.saunawagon.de" />
+<meta property="og:image" content="<%= 'https://www.saunawagon.de/' + require('../images/favicons/og-image.jpg') %>" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="900" />
+<meta property="og:locale" content="de_DE"/>
+
+<meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+<meta name="twitter:description" content="Sauna, Wellness, Erholung und Entspannung inmitten der Natur Berlin Brandenburgs, bei außergewöhnlichen Outdoor Events. Miete dir den Saunawagon für jede Veranstaltung oder einfach zum Relaxen in der Natur." />
+<meta name="twitter:image" content="<%= 'https://www.saunawagon.de/' + require('../images/favicons/og-image.jpg') %>" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Analytics script loaded in head -->
+<script src="analytics.js"></script>
+
+<style>
+    body {
+        transition: opacity 0.3s linear, visible 0.3s linear;
+    }
+
+    body.loading * {
+        display: none;
+    }
+
+    body.loading {
+        overflow: hidden;
+        visibility: hidden;
+        transition: opacity 0.3s linear, visible 0.3s linear;
+        opacity: 0;
+    }
+</style>
