@@ -2,8 +2,9 @@
   "name": "saunawagon",
   "description": "Website of an Sauna Wagon Campaign",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
+    "dev": "webpack serve --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development"
   },
