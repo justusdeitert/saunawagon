@@ -225,12 +225,16 @@ section {
     }
 
     img {
-        filter: blur(3px) brightness(0.9);
+        filter: blur(3px) brightness(0.7);
         transform: scale(1.05);
     }
     
     h2, h3, h4 {
-        text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.8),
+            0 0 20px rgba(0,0,0,0.6),
+            0 0 40px rgba(0,0,0,0.4);
+        color: white;
         
         &::after {
             display: none;
@@ -302,7 +306,7 @@ section {
 }
 
 .card {
-    box-shadow: 0 8px 32px rgba($sauna-wood-dark, 0.1);
+    box-shadow: none;
     border-radius: 20px;
     margin: 20px 0 20px 0;
     overflow: hidden;
@@ -311,7 +315,7 @@ section {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-        box-shadow: 0 16px 48px rgba($sauna-wood-dark, 0.15);
+        box-shadow: none;
         transform: translateY(-8px);
         
         img {
