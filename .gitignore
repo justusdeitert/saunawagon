@@ -52,6 +52,3 @@ build
 node_modules
 bower_components
 jspm_packages
-
-# Directories
-src/images
